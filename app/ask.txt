@@ -1,0 +1,5 @@
+how to set url pattern
+why url pattern doesn't contain show method in url
+how/where params differentiate action,id, and controller in params
+@article is accessed by show.html.erb
+where view, controller,model is binded together ?
