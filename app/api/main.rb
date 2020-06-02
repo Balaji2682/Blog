@@ -19,9 +19,13 @@ class Main < Grape::API # :nodoc:
     #   end
     # end
   end
-  post 'subscriber_add' do
+  post 'article_add' do
     d_params = declared(params, include_missing: false)
-    Article.create(d_params)
+    present Article.create(d_params), with: Entities::ArticleEntity
+  end
+
+  get 'articles' do
+    present Article.all, with: Entities::ArticleEntity
   end
 end
 # end
