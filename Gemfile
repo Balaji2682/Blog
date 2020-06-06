@@ -5,6 +5,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.1'
 
+gem 'searchkick'
+
 gem 'grape'
 
 gem 'grape-entity', '~> 0.5.0'
