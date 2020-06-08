@@ -3,6 +3,7 @@
 class User < ApplicationRecord #:nodoc:
   searchkick
   has_many :Article
+  has_secure_password
   validates :username, presence: true,
                        length: { minimum: 3, maximum: 25 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i.freeze
@@ -10,5 +11,8 @@ class User < ApplicationRecord #:nodoc:
                     length: { maximum: 100 },
                     uniqueness: { case_sensitive: false },
                     format: { with: VALID_EMAIL_REGEX }
+  before_save do
+    self.email = email.downcase
+  end
 
 end

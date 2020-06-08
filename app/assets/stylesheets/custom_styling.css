@@ -1,0 +1,38 @@
+@import "./bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+.navbar{
+  background-color: black !important;
+}
+.nav-link{
+  color: white !important;
+
+}
+#logo{
+  float: left;
+  font-size: 2.7em;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+  color: honeydew;
+  text-decoration: none;
+  margin-right: 24px ;
+}
+
+.round {
+  width: 100%;
+  border-radius: 25px;
+  border: 2px #2E2F30 solid;
+  padding: 5px 5px 5px 25px;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+
+.article-row{
+    height: 250px;
+}
+.card-title .card-text{
+    height: 20px;
+    overflow: hidden;
+}
